@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BridgeSprint Delivery Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>BridgeSprint Delivery Dashboard</h1>
+
+<div class="grid">
+
+<!-- INTERNAL TEAM UPDATES -->
+
+<div class="card">
+
+<h2>Internal Team Updates</h2>
+
+<form id="teamForm">
+
+<input id="engineer" placeholder="Engineer name">
+
+<input id="story" placeholder="Story ID">
+
+<select id="status" required>
+<option value="" disabled selected>Status</option>
+<option value="In Progress">In Progress</option>
+<option value="Completed">Completed</option>
+<option value="Blocked">Blocked</option>
+</select>
+
+<input id="blocker" placeholder="Blocker reason">
+
+<button>Add Update</button>
+
+</form>
+
+<table id="teamTable">
+
+<thead>
+<tr>
+<th>Engineer</th>
+<th>Story</th>
+<th>Status</th>
+<th>Blocker</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+
+
+<!-- CLIENT MEETING -->
+
+<div class="card">
+
+<h2>Client Meeting Updates</h2>
+
+<form id="clientForm">
+
+<input id="meetingName" placeholder="Meeting name">
+
+<textarea id="meetingUpdate" placeholder="Update from client"></textarea>
+
+<button>Add Update</button>
+
+</form>
+
+<ul id="clientFeed"></ul>
+
+</div>
+
+
+
+<!-- REQUIREMENT TRANSLATOR -->
+
+<div class="card">
+
+<h2>Requirement Translator</h2>
+
+<form id="reqForm">
+
+<textarea id="businessReq" placeholder="Client business requirement"></textarea>
+
+<textarea id="technicalReq" placeholder="Technical breakdown for developers"></textarea>
+
+<button>Translate</button>
+
+</form>
+
+<ul id="translatedReq"></ul>
+
+</div>
+
+
+
+<!-- MEETING MINUTES -->
+
+<div class="card">
+
+<h2>Meeting Minutes</h2>
+
+<form id="notesForm">
+
+<input id="meetingTitle" placeholder="Meeting name">
+
+<textarea id="meetingNotes" placeholder="Notes captured from meeting"></textarea>
+
+<button>Add Notes</button>
+
+</form>
+
+<ul id="meetingList"></ul>
+
+</div>
+
+
+
+<!-- OFFSHORE UPDATES -->
+
+<div class="card">
+
+<h2>Offshore Updates</h2>
+
+<form id="offshoreForm">
+
+<input id="offshoreTeam" placeholder="Team name">
+
+<textarea id="offshoreUpdate" placeholder="Update"></textarea>
+
+<button>Add Update</button>
+
+</form>
+
+<ul id="offshoreFeed"></ul>
+
+</div>
+
+
+
+<!-- CLIENT AVAILABILITY -->
+
+<div class="card">
+
+<h2>Client Availability</h2>
+
+<form id="clientAvailForm">
+
+<input id="clientName" placeholder="Client contact">
+
+<select id="clientStatus" required>
+<option value="" disabled selected>Status</option>
+<option value="Available">Available</option>
+<option value="On Leave">On Leave</option>
+<option value="Busy">Busy</option>
+</select>
+
+<input id="clientBackup" placeholder="Backup contact">
+
+<button>Add</button>
+
+</form>
+
+<table id="clientTable">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Backup</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+
+
+<!-- REPORT -->
+
+<div class="card">
+
+<h2>Daily Report Generator</h2>
+
+<button onclick="generateReport()">Generate Report</button>
+<button onclick="downloadReport()">Download</button>
+
+<pre id="report"></pre>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
